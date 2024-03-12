@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.102.2" />
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+    <PackageReference Include="DinkToPdfCopy" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.3.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="FilePdf\" />
+    <Folder Include="Persistences\Contexts\Configurations\" />
+    <Folder Include="Persistences\Interfaces\" />
+    <Folder Include="Persistences\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaleCore.Domain\SaleCore.Domain.csproj" />
+    <ProjectReference Include="..\SaleCore.Utilities\SaleCore.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
