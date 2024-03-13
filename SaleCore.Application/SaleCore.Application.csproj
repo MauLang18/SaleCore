@@ -21,15 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commons\Bases\Response\" />
-    <Folder Include="Commons\Bases\Request\" />
-    <Folder Include="Commons\Ordering\" />
-    <Folder Include="Commons\Select\Response\" />
-    <Folder Include="Dtos\" />
+    <Folder Include="Dtos\Warehouse\Request\" />
     <Folder Include="Extensions\" />
     <Folder Include="Mappers\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Validators\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

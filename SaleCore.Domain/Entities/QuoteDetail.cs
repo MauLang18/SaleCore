@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SaleCore.Domain.Entities;
+﻿namespace SaleCore.Domain.Entities;
 
 public partial class QuoteDetail
 {
