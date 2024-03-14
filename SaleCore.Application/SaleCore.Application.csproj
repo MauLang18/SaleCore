@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\Warehouse\Request\" />
     <Folder Include="Extensions\" />
     <Folder Include="Mappers\" />
     <Folder Include="Interfaces\" />
