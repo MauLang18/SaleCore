@@ -1,6 +1,6 @@
 ﻿namespace SaleCore.Application.Dtos.Client.Request
 {
-    public class ClienteRequestDto
+    public class ClientRequestDto
     {
         public string? Name { get; set; }
         public string? Email { get; set; }

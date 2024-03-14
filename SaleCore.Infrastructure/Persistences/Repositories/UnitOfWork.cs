@@ -7,7 +7,7 @@ using System.Data;
 
 namespace SaleCore.Infrastructure.Persistences.Repositories
 {
-    public class UnitOfWork : IUnitOWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly SaleCoreContext _context;
         public IGenericRepository<Category> _category = null!;

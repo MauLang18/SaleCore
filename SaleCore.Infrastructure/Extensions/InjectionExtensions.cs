@@ -17,7 +17,7 @@ namespace SaleCore.Infrastructure.Extensions
 
             services.AddDbContext<SaleCoreContext>(options => options.UseSqlServer(configuration.GetConnectionString("Connection"), b => b.MigrationsAssembly(assembly)), ServiceLifetime.Transient);
 
-            services.AddTransient<IUnitOWork, UnitOfWork>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<IFileStorageLocal, FileStorageLocal>();
             services.AddTransient<IGenerateExcel, GenerateExcel>();

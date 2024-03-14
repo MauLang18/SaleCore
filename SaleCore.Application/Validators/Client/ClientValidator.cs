@@ -3,7 +3,7 @@ using SaleCore.Application.Dtos.Client.Request;
 
 namespace SaleCore.Application.Validators.Client
 {
-    public class ClientValidator : AbstractValidator<ClienteRequestDto>
+    public class ClientValidator : AbstractValidator<ClientRequestDto>
     {
         public ClientValidator()
         {

@@ -3,7 +3,7 @@ using System.Data;
 
 namespace SaleCore.Infrastructure.Persistences.Interfaces
 {
-    public interface IUnitOWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         IGenericRepository<Category> Category { get; }
         IGenericRepository<Client> Client { get; }
@@ -20,6 +20,7 @@ namespace SaleCore.Infrastructure.Persistences.Interfaces
         IGenericRepository<Sale> Sale { get; }
         ISaleDetailRepository SaleDetail { get; }
         IGenericRepository<SubCategory> SubCategory { get; }
+        IUserRepository User { get; }
         IGenericRepository<VoucherDocumentType> VoucherDocumentType { get; }
         IWarehouseRepository Warehouse { get; }
         void SaveChanges();
