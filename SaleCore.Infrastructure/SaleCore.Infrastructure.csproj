@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="FilePdf\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SaleCore.Domain\SaleCore.Domain.csproj" />
     <ProjectReference Include="..\SaleCore.Utilities\SaleCore.Utilities.csproj" />
   </ItemGroup>

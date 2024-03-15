@@ -21,10 +21,6 @@ public partial class SaleCoreContext : DbContext
 
     public virtual DbSet<DocumentType> DocumentTypes { get; set; }
 
-    public virtual DbSet<Invoice> Invoices { get; set; }
-
-    public virtual DbSet<InvoiceDetail> InvoiceDetails { get; set; }
-
     public virtual DbSet<Product> Products { get; set; }
 
     public virtual DbSet<ProductStock> ProductStocks { get; set; }
@@ -35,15 +31,9 @@ public partial class SaleCoreContext : DbContext
 
     public virtual DbSet<PurcharseDetail> PurcharseDetails { get; set; }
 
-    public virtual DbSet<Quote> Quotes { get; set; }
-
-    public virtual DbSet<QuoteDetail> QuoteDetails { get; set; }
-
     public virtual DbSet<Sale> Sales { get; set; }
 
     public virtual DbSet<SaleDetail> SaleDetails { get; set; }
-
-    public virtual DbSet<SubCategory> SubCategories { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 

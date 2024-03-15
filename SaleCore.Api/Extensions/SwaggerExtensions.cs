@@ -17,7 +17,7 @@ namespace SaleCore.Api.Extensions
                 {
                     Name = "CUSTOMCODECR, S.A.",
                     Email = "customcodecr@gmail.com",
-                    Url = new Uri("https://https://customcode-2c2f5.web.app")
+                    Url = new Uri("https://customcode-2c2f5.web.app")
                 },
                 License = new OpenApiLicense
                 {

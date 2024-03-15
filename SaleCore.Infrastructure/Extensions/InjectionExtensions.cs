@@ -1,7 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DinkToPdf.Contracts;
+using DinkToPdf;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SaleCore.Infrastructure.FileExcel;
+using SaleCore.Infrastructure.FilePdf;
 using SaleCore.Infrastructure.FileStorage;
 using SaleCore.Infrastructure.Persistences.Contexts;
 using SaleCore.Infrastructure.Persistences.Interfaces;
@@ -21,6 +24,9 @@ namespace SaleCore.Infrastructure.Extensions
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<IFileStorageLocal, FileStorageLocal>();
             services.AddTransient<IGenerateExcel, GenerateExcel>();
+            services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+
+            services.AddTransient<IGeneratePdf, GeneratePdf>();
 
             return services;
         }

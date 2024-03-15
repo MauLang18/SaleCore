@@ -18,7 +18,5 @@ public partial class SaleDetail
 
     public virtual Product Product { get; set; } = null!;
 
-    public virtual Quote? Quote { get; set; }
-
     public virtual Sale Sale { get; set; } = null!;
 }

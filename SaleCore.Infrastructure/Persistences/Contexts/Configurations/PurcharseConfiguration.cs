@@ -8,6 +8,9 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<Purcharse> builder)
         {
+            builder.HasKey(e => e.Id).HasName("PK__Pucharse__1EE3C3FF970ED72A");
+            builder.Property(e => e.Id)
+                .HasColumnName("PurcharseId");
             builder.ToTable("Purcharse");
 
             builder.Property(e => e.Iva).HasColumnType("decimal(10, 2)");

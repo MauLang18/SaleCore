@@ -9,6 +9,10 @@
         public decimal Iva { get; set; }
         public decimal TotalAmount { get; set; }
         public int ClientId { get; set; }
+        public string? ClientName { get; set; }
+        public string? ClientAddress { get; set; }
+        public string? ClientEmail { get; set; }
+        public string? ClientPhone { get; set; }
         public int WarehouseId { get; set; }
         public int VoucherDocumentTypeId { get; set; }
         public DateTime DateOfSale { get; set; }

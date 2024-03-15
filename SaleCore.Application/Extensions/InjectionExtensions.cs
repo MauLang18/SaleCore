@@ -26,7 +26,7 @@ namespace SaleCore.Application.Extensions
             services.AddScoped<IGenerateExcelApplication, GenerateExcelApplication>();
             //services.AddScoped<IGenerateExcelApplication, GenerateExcelApplication>();
 
-            services.AddScoped<AuthApplication, AuthApplication>();
+            services.AddScoped<IAuthApplication, AuthApplication>();
             services.AddScoped<ICategoryApplication, CategoryApplication>();
             services.AddScoped<IClientApplication, ClientApplication>();
             services.AddScoped<IDocumentTypeApplication, DocumentTypeApplication>();
