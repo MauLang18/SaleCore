@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  salecore.api:
+    image: ${DOCKER_REGISTRY-}salecoreapi
+    build:
+      context: .
+      dockerfile: SaleCore.Api/Dockerfile
