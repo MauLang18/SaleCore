@@ -8,7 +8,9 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.HasKey(e => e.UserId).HasName("PK__User__1788CC4C280696F8");
+            builder.HasKey(e => e.Id).HasName("PK__User__1788CC4C280696F8");
+            builder.Property(e => e.Id)
+                .HasColumnName("UserId");
             builder.ToTable("User");
 
             builder.Property(e => e.AuthType)

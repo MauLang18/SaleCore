@@ -8,7 +8,9 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<VoucherDocumentType> builder)
         {
-            builder.HasKey(e => e.VoucherDocumentTypeId).HasName("PK__VoucherD__CD0B68F2E39021AF");
+            builder.HasKey(e => e.Id).HasName("PK__VoucherD__CD0B68F2E39021AF");
+            builder.Property(e => e.Id)
+                .HasColumnName("VoucherDocumentTypeId");
 
             builder.ToTable("VoucherDocumentType");
 

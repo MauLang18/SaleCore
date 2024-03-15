@@ -11,7 +11,6 @@
         public int SaleId { get; set; }
         public int ClientId { get; set; }
         public int WarehouseId { get; set; }
-        public int StatePaid { get; set; }
         public ICollection<SaleDetailRequestDto> SaleDetails { get; set; } = null!;
     }
 }

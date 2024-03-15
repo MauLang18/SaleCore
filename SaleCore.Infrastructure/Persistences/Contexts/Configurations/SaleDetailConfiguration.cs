@@ -19,10 +19,6 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__SaleDetai__Produ__7D439ABD");
 
-            builder.HasOne(d => d.Quote).WithMany(p => p.SaleDetails)
-                .HasForeignKey(d => d.QuoteId)
-                .HasConstraintName("FK__SaleDetai__Quote__7C4F7684");
-
             builder.HasOne(d => d.Sale).WithMany(p => p.SaleDetails)
                 .HasForeignKey(d => d.SaleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)

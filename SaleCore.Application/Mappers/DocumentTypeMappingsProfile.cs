@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using SaleCore.Application.Dtos.DocumentType.Request;
 using SaleCore.Application.Dtos.DocumentType.Response;
 using SaleCore.Domain.Entities;
 

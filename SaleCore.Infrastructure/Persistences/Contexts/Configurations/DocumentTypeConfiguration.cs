@@ -8,7 +8,9 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<DocumentType> builder)
         {
-            builder.HasKey(e => e.DocumentTypeId).HasName("PK__Document__DBA390E12D9C2052");
+            builder.HasKey(e => e.Id).HasName("PK__Document__DBA390E12D9C2052");
+            builder.Property(e => e.Id)
+                .HasColumnName("DocumentTypeId");
             builder.ToTable("DocumentType");
 
             builder.Property(e => e.Abbreviation)

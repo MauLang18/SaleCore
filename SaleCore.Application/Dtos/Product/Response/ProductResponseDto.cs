@@ -10,7 +10,6 @@
         public string? Image { get; set; }
         public decimal UnitSalePrice { get; set; }
         public string? Category { get; set; }
-        public string? SubCategory { get; set; }
         public DateTime AuditCreateDate { get; set; }
         public int State { get; set; }
         public string? StateProduct { get; set; }

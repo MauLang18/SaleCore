@@ -23,7 +23,21 @@ namespace SaleCore.Application.Extensions
             services.AddTransient<IOrderingQuery, OrderingQuery>();
             services.AddTransient<IFileStorageLocalApplication, FileStorageLocalApplication>();
 
+            services.AddScoped<IGenerateExcelApplication, GenerateExcelApplication>();
+            //services.AddScoped<IGenerateExcelApplication, GenerateExcelApplication>();
+
+            services.AddScoped<AuthApplication, AuthApplication>();
             services.AddScoped<ICategoryApplication, CategoryApplication>();
+            services.AddScoped<IClientApplication, ClientApplication>();
+            services.AddScoped<IDocumentTypeApplication, DocumentTypeApplication>();
+            services.AddScoped<IProductApplication, ProductApplication>();
+            services.AddScoped<IProductStockApplication, ProductStockApplication>();
+            services.AddScoped<IProviderApplication, ProviderApplication>();
+            services.AddScoped<IPurcharseApplication, PurcharseApplication>();
+            services.AddScoped<ISaleApplication, SaleApplication>();
+            services.AddScoped<IUserApplication, UserApplication>();
+            services.AddScoped<IVoucherDocumentTypeApplication, VoucherDocumentTypeApplication>();
+            services.AddScoped<IWarehouseApplication, WarehouseApplication>();
 
             services.AddWatchDog(configuration);
 

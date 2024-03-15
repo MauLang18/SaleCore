@@ -8,7 +8,9 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<Sale> builder)
         {
-            builder.HasKey(e => e.SaleId).HasName("PK__Sale__1EE3C3FF970ED72A");
+            builder.HasKey(e => e.Id).HasName("PK__Sale__1EE3C3FF970ED72A");
+            builder.Property(e => e.Id)
+                .HasColumnName("SaleId");
             builder.ToTable("Sale");
 
             builder.Property(e => e.Iva).HasColumnType("decimal(10, 2)");
@@ -19,10 +21,6 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
                 .HasForeignKey(d => d.ClientId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Sale__ClientId__778AC167");
-
-            builder.HasOne(d => d.Quote).WithMany(p => p.Sales)
-                .HasForeignKey(d => d.QuoteId)
-                .HasConstraintName("FK__Sale__QuoteId__787EE5A0");
 
             builder.HasOne(d => d.VoucherDocumentType).WithMany(p => p.Sales)
                 .HasForeignKey(d => d.VoucherDocumentTypeId)

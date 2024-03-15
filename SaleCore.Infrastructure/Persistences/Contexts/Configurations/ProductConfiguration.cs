@@ -8,7 +8,9 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.HasKey(e => e.ProductId).HasName("PK__Product__B40CC6CD0EB0AF0D");
+            builder.HasKey(e => e.Id).HasName("PK__Product__B40CC6CD0EB0AF0D");
+            builder.Property(e => e.Id)
+                .HasColumnName("ProductId");
             builder.ToTable("Product");
 
             builder.Property(e => e.Name)
@@ -20,11 +22,6 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
                 .HasForeignKey(d => d.CategoryId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Product__Categor__6B24EA82");
-
-            builder.HasOne(d => d.SubCategory).WithMany(p => p.Products)
-                .HasForeignKey(d => d.SubCategoryId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Product__SubCate__6C190EBB");
         }
     }
 }

@@ -16,11 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SaleCore.Application\SaleCore.Application.csproj" />
     <ProjectReference Include="..\SaleCore.Infrastructure\SaleCore.Infrastructure.csproj" />
     <ProjectReference Include="..\SaleCore.Utilities\SaleCore.Utilities.csproj" />

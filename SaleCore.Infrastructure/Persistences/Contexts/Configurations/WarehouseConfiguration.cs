@@ -8,7 +8,9 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<Warehouse> builder)
         {
-            builder.HasKey(e => e.WarehouseId).HasName("PK__Warehous__2608AFF9564CAD78");
+            builder.HasKey(e => e.Id).HasName("PK__Warehous__2608AFF9564CAD78");
+            builder.Property(e => e.Id)
+                .HasColumnName("WarehouseId");
             builder.ToTable("Warehouse");
 
             builder.Property(e => e.Name).HasMaxLength(25);

@@ -16,9 +16,5 @@ public partial class Client : BaseEntity
 
     public virtual DocumentType DocumentType { get; set; } = null!;
 
-    public virtual ICollection<Invoice> Invoices { get; set; } = new List<Invoice>();
-
-    public virtual ICollection<Quote> Quotes { get; set; } = new List<Quote>();
-
     public virtual ICollection<Sale> Sales { get; set; } = new List<Sale>();
 }

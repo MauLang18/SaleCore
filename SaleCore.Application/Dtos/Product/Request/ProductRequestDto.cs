@@ -11,7 +11,6 @@ namespace SaleCore.Application.Dtos.Product.Request
         public IFormFile? Image { get; set; }
         public decimal UnitSalePrice { get; set; }
         public int CategoryId { get; set; }
-        public int? SubCategoryId { get; set; }
         public int State { get; set; }
     }
 }

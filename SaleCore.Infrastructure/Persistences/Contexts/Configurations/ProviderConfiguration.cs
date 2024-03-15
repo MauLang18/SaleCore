@@ -8,7 +8,9 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<Provider> builder)
         {
-            builder.HasKey(e => e.ProviderId).HasName("PK__Provider__B54C687DABDF2D96");
+            builder.HasKey(e => e.Id).HasName("PK__Provider__B54C687DABDF2D96");
+            builder.Property(e => e.Id)
+                .HasColumnName("ProviderId");
             builder.ToTable("Provider");
 
             builder.Property(e => e.DocumentNumber)

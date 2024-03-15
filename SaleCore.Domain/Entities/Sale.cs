@@ -6,8 +6,6 @@ public partial class Sale : BaseEntity
 
     public int WarehouseId { get; set; }
 
-    public int? QuoteId { get; set; }
-
     public int VoucherDocumentTypeId { get; set; }
 
     public string? VoucherNumber { get; set; }
@@ -20,13 +18,7 @@ public partial class Sale : BaseEntity
 
     public decimal TotalAmount { get; set; }
 
-    public int StatePaid { get; set; }
-
     public virtual Client Client { get; set; } = null!;
-
-    public virtual ICollection<Invoice> Invoices { get; set; } = new List<Invoice>();
-
-    public virtual Quote? Quote { get; set; }
 
     public virtual ICollection<SaleDetail> SaleDetails { get; set; } = new List<SaleDetail>();
 

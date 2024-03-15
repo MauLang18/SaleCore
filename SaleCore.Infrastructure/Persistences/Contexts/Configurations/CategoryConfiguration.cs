@@ -8,7 +8,9 @@ namespace SaleCore.Infrastructure.Persistences.Contexts.Configurations
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
-            builder.HasKey(e => e.CategoryId).HasName("PK__Category__19093A0B1B66D1AA");
+            builder.HasKey(e => e.Id).HasName("PK__Category__19093A0B1B66D1AA");
+            builder.Property(e => e.Id)
+                .HasColumnName("CategoryId");
             builder.ToTable("Category");
 
             builder.Property(e => e.Name).HasMaxLength(100);

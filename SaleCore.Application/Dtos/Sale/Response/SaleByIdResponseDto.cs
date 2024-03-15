@@ -9,11 +9,9 @@
         public decimal Iva { get; set; }
         public decimal TotalAmount { get; set; }
         public int ClientId { get; set; }
-        public int QuoteId { get; set; }
         public int WarehouseId { get; set; }
         public int VoucherDocumentTypeId { get; set; }
         public DateTime DateOfSale { get; set; }
-        public int StatePaid { get; set; }
         public ICollection<SaleDetailByIdResponseDto> SaleDetails { get; set; } = null!;
     }
 }
