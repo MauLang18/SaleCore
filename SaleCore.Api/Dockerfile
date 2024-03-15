@@ -34,6 +34,4 @@ RUN dotnet publish "./SaleCore.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publi
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-RUN ln -fs /usr/share/zoneinfo/America/Guatemala /etc/localtime
-RUN dpkg-reconfigure --frontend noninteractive tzdata
 ENTRYPOINT ["dotnet", "SaleCore.Api.dll"]
