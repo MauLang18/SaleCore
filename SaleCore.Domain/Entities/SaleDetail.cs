@@ -4,8 +4,6 @@ public partial class SaleDetail
 {
     public int SaleId { get; set; }
 
-    public int? QuoteId { get; set; }
-
     public int ProductId { get; set; }
 
     public int Quantity { get; set; }

@@ -143,7 +143,7 @@ namespace SaleCore.Application.Services
             {
                 transaction.Rollback();
                 response.IsSuccess = false;
-                response.Message = (ex.Message);
+                response.Message = ReplyMessage.MESSAGE_EXCEPTION;
                 WatchLogger.Log(ex.Message);
             }
 
