@@ -24,7 +24,7 @@ namespace SaleCore.Application.Extensions
             services.AddTransient<IFileStorageLocalApplication, FileStorageLocalApplication>();
 
             services.AddScoped<IGenerateExcelApplication, GenerateExcelApplication>();
-            //services.AddScoped<IGenerateExcelApplication, GenerateExcelApplication>();
+            services.AddScoped<IGeneratePdfApplication, GeneratePdfApplication>();
 
             services.AddScoped<IAuthApplication, AuthApplication>();
             services.AddScoped<ICategoryApplication, CategoryApplication>();
