@@ -71,7 +71,7 @@ namespace SaleCore.Api.Controllers
             {
                 var data = response.Data;
 
-                string rutaPlantilla = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Static/Template/Invoice", $"index.html");
+                string rutaPlantilla = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Template/Invoice/index.html");
                 contenidoPlantilla = System.IO.File.ReadAllText(rutaPlantilla);
                 titulo = "Factura"; // Título de la factura
 
@@ -112,7 +112,7 @@ namespace SaleCore.Api.Controllers
                     .Replace("#IVA#", data.Iva.ToString())
                     .Replace("#total#", data.TotalAmount.ToString());
 
-                nombreArchivo = $"{data.VoucherNumber}-{data!.DateOfSale.ToString("dd-MM-yyyy")}-{data.ClientId}.pdf";
+                nombreArchivo = $"{data.VoucherNumber}-{data!.DateOfSale.ToString("dd-MM-yyyy")}-{data.ClientName}.pdf";
             }
             catch (Exception ex)
             {

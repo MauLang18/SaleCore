@@ -19,6 +19,7 @@ namespace SaleCore.Application.Mappers
             CreateMap<Sale, SaleByIdResponseDto>()
                  .ForMember(x => x.SaleId, x => x.MapFrom(y => y.Id))
                  .ForMember(x => x.DateOfSale, x => x.MapFrom(y => y.AuditCreateDate))
+                 .ForMember(x => x.ClientId, x => x.MapFrom(y => y.ClientId))
                  .ForMember(x => x.ClientName, x => x.MapFrom(y => y.Client.Name))
                  .ForMember(x => x.ClientAddress, x => x.MapFrom(y => y.Client.Address))
                  .ForMember(x => x.ClientPhone, x => x.MapFrom(y => y.Client.Phone))
