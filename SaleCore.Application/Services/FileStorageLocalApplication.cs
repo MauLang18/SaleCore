@@ -33,6 +33,8 @@ namespace SaleCore.Application.Services
             var scheme = _httpContextAccessor.HttpContext!.Request.Scheme;
             var host = _httpContextAccessor.HttpContext.Request.Host;
 
+            Console.WriteLine(webRootPath + " " + scheme + " " + host);
+
             return await _fileStorageLocal.EditFile(container, file, route, webRootPath, scheme, host.Value);
         }
 

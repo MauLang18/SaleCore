@@ -4,7 +4,7 @@
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
     <DockerPublishLocally>False</DockerPublishLocally>
-    <ProjectGuid>c3a9d6e5-cb2a-4198-8bc4-68c7c7ff1251</ProjectGuid>
+    <ProjectGuid>c714be42-ce96-4eae-b3e8-556ba218d25b</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>salecore.api</DockerServiceName>

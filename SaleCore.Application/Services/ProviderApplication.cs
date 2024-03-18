@@ -43,13 +43,13 @@ namespace SaleCore.Application.Services
                     switch (filters.NumFilter)
                     {
                         case 1:
-                            providers = providers.Where(x => x.Name.Contains(filters.TextFilter));
+                            providers = providers.Where(x => x.Name!.Contains(filters.TextFilter));
                             break;
                         case 2:
-                            providers = providers.Where(x => x.Email.Contains(filters.TextFilter));
+                            providers = providers.Where(x => x.Email!.Contains(filters.TextFilter));
                             break;
                         case 3:
-                            providers = providers.Where(x => x.DocumentNumber.Contains(filters.TextFilter));
+                            providers = providers.Where(x => x.DocumentNumber!.Contains(filters.TextFilter));
                             break;
                     }
                 }
