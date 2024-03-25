@@ -94,6 +94,13 @@ namespace SaleCore.Application.Services
                     return response;
                 }
 
+                var client = await _unitOfWork.Client.GetByIdAsync(sale.ClientId);
+
+                if (client != null)
+                {
+                    sale.Client = client;
+                }
+
                 var saleDetails = await _unitOfWork.SaleDetail
                     .GetSaleDetailBySaleId(sale.Id);
 
