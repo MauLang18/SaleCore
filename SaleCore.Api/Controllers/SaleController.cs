@@ -73,21 +73,18 @@ namespace SaleCore.Api.Controllers
 
                 string rutaPlantilla = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Template/Invoice/index.html");
                 contenidoPlantilla = System.IO.File.ReadAllText(rutaPlantilla);
-                titulo = "Factura"; // Título de la factura
+                titulo = "Factura";
 
-                // Reemplazar datos de Fecha y Número de Factura
                 contenidoPlantilla = contenidoPlantilla
                     .Replace("#fecha#", data!.DateOfSale.ToString("dd-MM-yyyy"))
                     .Replace("#factura#", data!.VoucherNumber);
 
-                // Reemplazar datos del Cliente
                 contenidoPlantilla = contenidoPlantilla
                     .Replace("#cliente#", data.ClientName)
-                    .Replace("#direccion#", data.ClientAddress) 
-                    .Replace("#telefono#", data.ClientPhone) 
-                    .Replace("#correo#", data.ClientEmail); 
+                    .Replace("#direccion#", data.ClientAddress)
+                    .Replace("#telefono#", data.ClientPhone)
+                    .Replace("#correo#", data.ClientEmail);
 
-                // Iterar sobre detalles y llenar la tabla
                 string detallesTabla = "";
                 decimal subTotal = 0;
 
@@ -96,23 +93,22 @@ namespace SaleCore.Api.Controllers
                     subTotal += detalle.TotalAmount;
 
                     detallesTabla += $@"
-            <tr>
-                <td>{detalle.Name}</td>
-                <td>{detalle.Code}</td>
-                <td>{detalle.UnitSalePrice}</td>
-                <td>{detalle.Quantity}</td>
-                <td>{detalle.TotalAmount}</td>
-            </tr>";
+<tr>
+    <td>{detalle.Name}</td>
+    <td>{detalle.Code}</td>
+    <td>{detalle.UnitSalePrice}</td>
+    <td>{detalle.Quantity}</td>
+    <td>{detalle.TotalAmount}</td>
+</tr>";
                 }
 
-                // Reemplazar datos de la tabla de detalles
                 contenidoPlantilla = contenidoPlantilla
                     .Replace("<!--DetallesTabla-->", detallesTabla)
                     .Replace("#subTotal#", subTotal.ToString())
                     .Replace("#IVA#", data.Iva.ToString())
                     .Replace("#total#", data.TotalAmount.ToString());
 
-                nombreArchivo = $"{data.VoucherNumber}-{data!.DateOfSale.ToString("dd-MM-yyyy")}-{data.ClientName}.pdf";
+                nombreArchivo = $"{data.VoucherNumber}.pdf";
             }
             catch (Exception ex)
             {
@@ -123,6 +119,5 @@ namespace SaleCore.Api.Controllers
 
             return File(pdfBytes, "application/pdf", nombreArchivo);
         }
-
     }
 }
